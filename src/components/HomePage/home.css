@@ -1,0 +1,127 @@
+.hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #394151 55%, #394151 55%, #0041C2);
+    z-index: -1;
+    transform: skewY(-6deg);
+    transform-origin: top left;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.hero p {
+    font-size: clamp(1.1rem, 2vw, 1.6rem);
+    opacity: 0.9;
+    margin: 0;
+    line-height: 1.4;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.cta-button {
+    padding: 15px 40px;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    background: linear-gradient(45deg, #0041C2 60%, #0041C2 60%, #00e0ef);
+    color: #0B0B3B;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 600;
+    align-self: center;
+    white-space: nowrap;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(0, 180, 216, 0.5);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.modal-content {
+    background: #0B0B3B;
+    width: 95%;
+    height: 90vh;
+    max-width: 1400px;
+    border-radius: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+}
+
+.close-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.small-text {
+    font-size: 12px;
+    transform: scale(0.5);
+    transform-origin: left center;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 20px;
+    }
+}
