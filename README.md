@@ -1,8 +1,7 @@
 # Observerly Demo
 
 This repository serves as a demo for **Observerly**, showcasing the use of **Vue** and **TypeScript** along with **Unovis** for data visualization. It provides an example of integrating these tools to create a reactive and visually engaging application.
-You can checkout the running project [here](http://192.145.44.50:3000/)
-## Project Structure
+
 
 - **Vue**: Utilized as the main framework for building a responsive and component-based UI.
 - **TypeScript**: Enforces type safety and enhances code reliability across the project.
